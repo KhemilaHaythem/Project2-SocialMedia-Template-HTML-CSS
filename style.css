@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --first-color: #1876f2;
+    --online-color: #41db51;
+}
+
+
+/* start of the header */
+
+header {
+    background-color: var(--first-color);
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+
+/* The left navbar */
+
+header .left-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.left-navbar .logo {
+    width: 150px;
+}
+
+.left-navbar ul {
+    margin-left: 45px;
+    list-style: none;
+}
+
+.left-navbar ul li {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 10px 0;
+}
+
+.left-navbar ul li img {
+    width: 28px;
+}
+
+
+/* the right navbar */
+
+header .right-navbar {
+    display: flex;
+    align-items: center;
+    padding-right: 8%;
+}
+
+header .right-navbar .searchBox {
+    display: flex;
+}
+
+header .right-navbar .searchBox {
+    width: 350px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+header .right-navbar .searchBox img {
+    width: 20px;
+    margin-left: 5px;
+}
+
+header .right-navbar .searchBox input {
+    width: 80%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: 15px;
+    color: #111111;
+}
+
+header .right-navbar .icon {
+    position: relative;
+    margin-left: 30px;
+}
+
+header .right-navbar .icon img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+header .right-navbar .icon::after {
+    position: absolute;
+    content: "";
+    background-color: var(--online-color);
+    width: 7px;
+    height: 7px;
+    right: 0;
+    border-radius: 50%;
+    top: 0;
+    border: 2px solid #fff;
+}
+
+
+/* The end of the header */
+
+
+/* Start the container */
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    background-color: #efefef;
+    min-height: calc(100vh - 65px);
+}
+
+.container .left-sidebar {
+    flex-basis: 25%;
+    height: 100%;
+    align-self: flex-start;
+    position: sticky;
+    top: 70px;
+}
+
+.container .right-sidebar {
+    flex-basis: 25%;
+    background-color: #fff;
+    height: 100%;
+    align-self: flex-start;
+    position: sticky;
+    top: 70px;
+}
+
+.container .main-container {
+    flex-basis: 47%;
+    /* background-color: #fff; */
+    height: 100%;
+    align-self: flex-start;
+}
+
+
+/* Start of the left sidebar */
+
+
+/* The links */
+
+.container .left-sidebar .links {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container .left-sidebar .links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #111111;
+}
+
+.container .left-sidebar .links a:last-child {
+    color: var(--first-color);
+    opacity: .5;
+}
+
+.container .left-sidebar .links a img {
+    margin-right: 15px;
+    width: 25px;
+}
+
+
+/* The shortcuts */
+
+.container .left-sidebar .Shortcuts p {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    opacity: .6;
+}
+
+.container .left-sidebar .Shortcuts a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    color: #111111;
+}
+
+.container .left-sidebar .Shortcuts a img {
+    width: 45px;
+    margin-right: 15px;
+}
+
+
+/* End left sidebar */
+
+
+/* Start the right sidebar */
+
+.container .right-sidebar {
+    padding: 10px 20px;
+}
+
+.container .right-sidebar .events .event-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.container .right-sidebar .events .event-title h4 {
+    opacity: .6;
+}
+
+.container .right-sidebar .events .event-title a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.container .right-sidebar .events .event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container .right-sidebar .events .event .left {
+    padding-top: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .right-sidebar .events .event .left span {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 10px;
+    color: #fff;
+    height: 20px;
+    background-color: var(--first-color);
+}
+
+.container .right-sidebar .events .event .right h3 {
+    font-size: 16px;
+    opacity: .6;
+}
+
+.container .right-sidebar .events .event .right p {
+    font-size: 13px;
+    opacity: .6;
+}
+
+.container .right-sidebar .events .event .right a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.container .right-sidebar .events .image {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.container .right-sidebar .events .image img {
+    width: 100%;
+}
+
+.container .right-sidebar .events .profile-account .profile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container .right-sidebar .events .profile-account .profile .image {
+    position: relative;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.container .right-sidebar .events .profile-account .profile .image img {
+    border-radius: 50%;
+}
+
+.container .right-sidebar .events .profile-account .profile .image::after {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: var(--online-color);
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+/* End of right sidebar */
+
+
+/* Start of the main-container */
+
+
+/* The galery-Story */
+
+.main-container .story-galery {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-container .story-galery .story {
+    flex-basis: 18%;
+    padding-top: 25%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.story1 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(images/status-1.png);
+}
+
+.story2 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(images/status-2.png);
+}
+
+.story3 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(images/status-3.png);
+}
+
+.story4 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(images/status-4.png);
+}
+
+.story5 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(images/status-5.png);
+}
+
+.main-container .story-galery .story:first-child img {
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.main-container .story-galery .story:not(:first-child) img {
+    width: 45px;
+    border-radius: 50%;
+    border: 3px solid #1876f2;
+    top: 10px;
+    position: absolute;
+    left: 10px;
+}
+
+.main-container .story-galery .story p {
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+/* The writing post */
+
+.write-post {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    border-radius: 7px;
+    color: #626262;
+    margin-bottom: 20px;
+}
+
+.write-post .first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-profile {
+    display: flex;
+    align-items: center;
+}
+
+.information-profile img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.information-profile .name {
+    position: absolute;
+    padding-left: 60px;
+}
+
+.information-profile span {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.write-post .second-row {
+    padding-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.write-post .second-row textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+.write-post .third-row {
+    width: 100%;
+    padding-left: 60px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.write-post .third-row a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.write-post .third-row a img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.main-container .statut {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 7px;
+    color: #626262;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.main-container .statut .information-profile {
+    margin-bottom: 20px;
+}
+
+.main-container .statut p {
+    font-size: 15px;
+}
+
+.main-container .statut p:nth-child(2) {
+    line-height: 25px;
+}
+
+.main-container .statut .image {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.main-container .statut .image img,
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.main-container .last-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-container .last-row .react {
+    display: flex;
+    align-items: center;
+}
+
+.main-container .last-row .react p {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.main-container .last-row .react p img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.main-container .last-row .details {
+    display: flex;
+    align-items: center;
+}
+
+.main-container .last-row .details img {
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.last {
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #e02c2c;
+}
+
+.last a {
+    text-decoration: none;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 10px 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    transition: all .4s ease;
+    display: inline-block;
+}
+
+.last a:hover {
+    transform: scale(1.2);
+}
